@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const generatePage = require('./src/page-template');
-const { writeFile, copyFile } = require('./utils/generate-site');
+const { writeFile } = require('./src/generateHTML.js');
 
 const promptUser = () => {
   return inquirer.prompt([
@@ -136,10 +136,7 @@ promptUser()
   })
   .then(writeFileResponse => {
     console.log(writeFileResponse);
-    return copyFile();
-  })
-  .then(copyFileResponse => {
-    console.log(copyFileResponse);
+    return;
   })
   .catch(err => {
     console.log(err);
