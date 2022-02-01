@@ -1,5 +1,3 @@
-const { expect } = require('@jest/globals');
-const { test } = require('jest-circus');
 const Engineer = require('../lib/Engineer.js');
 
 //constructor argument
