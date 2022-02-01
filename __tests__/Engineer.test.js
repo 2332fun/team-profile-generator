@@ -1,3 +1,4 @@
+//ties Engineer.js into Engineer.test.js
 const Engineer = require('../lib/Engineer.js');
 
 //constructor argument

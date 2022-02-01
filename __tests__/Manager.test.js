@@ -1,3 +1,4 @@
+//ties Manager.js into Manager.test.js
 const Manager = require('../lib/Manager.js');
 
 //constructor argument

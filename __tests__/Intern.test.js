@@ -1,0 +1,1 @@
+//ties Intern.js into Intern.test.js
