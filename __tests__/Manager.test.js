@@ -11,7 +11,7 @@ test('should get office number', () => {
 //method arguments
 test('method for getting office number', () => {
     const officenumber = 654321
-    const manager = new Manager("name", 1234, "email", officenumber)
+    const manager = new Manager("name", 123456, "email", officenumber)
         expect(manager.getOfficeNumber()).toBe(officenumber)
 })
 
