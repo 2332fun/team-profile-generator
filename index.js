@@ -4,6 +4,7 @@ const { writeFile } = require('./src/generateHTML.js');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const Employee = require('./lib/Employee');
 
 //WRITE PROMPTS TO MATCH MANAGER, ENGINEER, INTERN, EMPLOYEE
 //Manager: Name, id, email, role, officenumber
@@ -184,8 +185,8 @@ addEngineer = () => {
   }
   ]).then((answers) => {
     console.log(answers);
-    const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerON)
-    allEmployees.push(manager);
+    const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGH)
+    allEmployees.push(engineer);
     directory();
   })
 }
@@ -194,60 +195,60 @@ addIntern = () => {
   return inquirer.prompt([
     {
       type: 'input',
-      name: 'managerName',
-      message: 'Manager: What is your name? (Required)',
+      name: 'internName',
+      message: 'What is the name of the Intern? (Required)',
       validate: nameInput => {
         if (nameInput) {
           return true;
         } else {
-          console.log('Please enter your name!');
+          console.log('Please enter the name of the Intern!');
           return false;
         }
       }
     },
     {
       type: 'input',
-      name: 'managerId',
-      message: 'Manager: What is your id? (Required)',
+      name: 'internId',
+      message: 'What is the id of the Intern? (Required)',
       validate: idInput => {
         if (idInput) {
           return true;
         } else {
-          console.log('Please enter your id!');
+          console.log('Please enter the id of the Intern!');
           return false;
         }
       }
     },
     {
       type: 'input',
-      name: 'managerEmail',
-      message: 'Manager: What is your email? (Required)',
+      name: 'internEmail',
+      message: 'What is the email of the Intern? (Required)',
       validate: emailInput => {
         if (emailInput) {
           return true;
         } else {
-          console.log('Please enter your email!');
+          console.log('Please enter the email of the Intern!');
           return false;
         }
       }
     },
     {
     type: 'input',
-    name: 'managerON',
-    message: 'Manager: What is your office number? (Required)',
+    name: 'internSchool',
+    message: 'What is the School of the Intern? (Required)',
     validate: onInput => {
       if (onInput) {
         return true;
       } else {
-        console.log('Please enter your office number!');
+        console.log('Please enter the school of the Intern!');
         return false;
       }
     }
   }
   ]).then((answers) => {
     console.log(answers);
-    const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerON)
-    allEmployees.push(manager);
+    const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool)
+    allEmployees.push(intern);
     directory();
   })
 }
