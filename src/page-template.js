@@ -24,7 +24,9 @@ module.exports = generatePage => {
       </div>
     </header>
     <main class="container my-5">
-      ${generatePage(allEmployees)}
+      ${generateManager}
+      ${generateEngineer}
+      ${generateIntern}
     </main>
     <footer class="container text-center py-3">
       <h3 class="text-dark">&copy;2020 by INSERTNAME</h3>
@@ -33,7 +35,6 @@ module.exports = generatePage => {
   </html>
   `;
 };
-
 
 // template for Manager
 const generateManager = Manager => {
