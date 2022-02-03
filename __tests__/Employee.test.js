@@ -15,7 +15,7 @@ test('should show employee id', () => {
 })
 
 test('should show employee email', () => {
-    const email = 'employee.name + "@gmail.com"'
+    const email = 'Dave@gmail.com'
     const employee = new Employee("Dave", 123456, email)
         expect(employee.email).toBe(email)
 })
@@ -34,7 +34,7 @@ test('method for getting the employee id', () => {
 })
 
 test('method for getting the employee email', () => {
-    const email = 'employee.name + "@gmail.com"'
+    const email = 'Dave@gmail.com'
     const employee = new Employee("Dave", 123456, email)
         expect(employee.getEmail()).toBe(email)
 })

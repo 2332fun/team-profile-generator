@@ -10,7 +10,17 @@ const generateAbout = aboutText => {
         <p>${aboutText}</p>
       </section>
     `;
-  };
+};
+
+// template for Manager
+const generateManager = managerId => {
+  return `<p>${managerId}</p>`;
+}
+
+// template for intern
+
+// Template for Engineer
+
   
   // create the projects section
   const generateProjects = projectsArr => {
