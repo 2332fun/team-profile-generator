@@ -10,3 +10,11 @@ ReferenceError: generatePage is not defined
     at C:\Users\WorkSchool\Desktop\projects\team-profile-generator\index.js:119:9
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 
+C:\Users\WorkSchool\Desktop\projects\team-profile-generator\index.js:251
+  return writeFile(generatePage(allEmployees));
+                   ^
+
+TypeError: generatePage is not a function
+    at finish (C:\Users\WorkSchool\Desktop\projects\team-profile-generator\index.js:251:20)
+    at C:\Users\WorkSchool\Desktop\projects\team-profile-generator\index.js:119:9
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
