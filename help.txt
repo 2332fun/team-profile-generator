@@ -1,0 +1,12 @@
+I need help with:
+
+C:\Users\WorkSchool\Desktop\projects\team-profile-generator\src\page-template.js:99
+            <a class="ml-2 my-1 px-2 py-1 bg-secondary text-dark" href="https://github.com/${header.github}">GitHub</a>
+                                                                                                    ^
+
+ReferenceError: generatePage is not defined
+    at module.exports (C:\Users\WorkSchool\Desktop\projects\team-profile-generator\src\page-template.js:99:101)
+    at finish (C:\Users\WorkSchool\Desktop\projects\team-profile-generator\index.js:251:20)
+    at C:\Users\WorkSchool\Desktop\projects\team-profile-generator\index.js:119:9
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+

@@ -13,7 +13,7 @@ const generateAbout = aboutText => {
 };
 
 // template for Manager
-const generateManager = managerId => {
+const generateManager = Manager => {
   return `
   <p>${managerName}</p>
   <p>${managerId}</p>
@@ -21,9 +21,23 @@ const generateManager = managerId => {
   <p>${managerON}</p>`;
 }
 
-// template for intern
-
 // Template for Engineer
+const generateEngineer = Engineer => {
+  return `
+  <p>${engineerName}</p>
+  <p>${engineerId}</p>
+  <p>${engineerEmail}</p>
+  <p>${engineerGH}</p>`;
+}
+
+// template for intern
+const generateIntern = Intern => {
+  return `
+  <p>${internName}</p>
+  <p>${internId}</p>
+  <p>${internEmail}</p>
+  <p>${internSchool}</p>`;
+}
 
   
   // create the projects section
@@ -101,8 +115,7 @@ const generateManager = managerId => {
         </div>
       </header>
       <main class="container my-5">
-        ${generateAbout(about)}
-        ${generateProjects(projects)}
+        ${generatePage(allEmployees)}
       </main>
       <footer class="container text-center py-3">
         <h3 class="text-dark">&copy;2020 by ${header.name}</h3>
