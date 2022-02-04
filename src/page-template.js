@@ -1,5 +1,19 @@
 //template for page layout
-module.exports = generatePage => {
+module.exports = generatePage = allEmployees => {
+  //map allEmployees, generateHTML
+  const employeeHTML = allEmployees.map(employee => {
+    if (employee.getRole() == 'Manager') {
+      return generateManager(employee)
+  }
+  if (employee.getRole() == 'Engineer') {
+    return generateEngineer(employee)
+  }
+  if (employee.getRole() == 'Intern') {
+  return generateIntern(employee)
+  }
+})
+console.log(employeeHTML);
+
   return `
   <!DOCTYPE html>
   <html lang="en">
@@ -24,9 +38,9 @@ module.exports = generatePage => {
       </div>
     </header>
     <main class="container my-5">
-      ${generateManager}
-      ${generateEngineer}
-      ${generateIntern}
+      ${generateManager()}
+      ${generateEngineer()}
+      ${generateIntern()}
     </main>
     <footer class="container text-center py-3">
       <h3 class="text-dark">&copy;2020 by INSERTNAME</h3>
@@ -38,29 +52,29 @@ module.exports = generatePage => {
 
 // template for Manager
 const generateManager = Manager => {
-  return `
-  <p>${managerName}</p>
-  <p>${managerId}</p>
-  <p>${managerEmail}</p>
-  <p>${managerON}</p>`;
+  // return `
+  // <p>${Manager.name}</p>
+  // <p>${Manager.id}</p>
+  // <p>${Manager.email}</p>
+  // <p>${Manager.officeNumber}</p>`
 }
 
 // Template for Engineer
 const generateEngineer = Engineer => {
-  return `
-  <p>${engineerName}</p>
-  <p>${engineerId}</p>
-  <p>${engineerEmail}</p>
-  <p>${engineerGH}</p>`;
+  // return `
+  // <p>${Engineer.name}</p>
+  // <p>${Engineer.id}</p>
+  // <p>${Engineer.email}</p>
+  // <p>${Engineer.github}</p>`
 }
 
 // template for intern
 const generateIntern = Intern => {
-  return `
-  <p>${internName}</p>
-  <p>${internId}</p>
-  <p>${internEmail}</p>
-  <p>${internSchool}</p>`;
+  // return `
+  // <p>${Intern.name}</p>
+  // <p>${Intern.id}</p>
+  // <p>${Intern.email}</p>
+  // <p>${Intern.school}</p>`
 }
   
 
