@@ -12,7 +12,6 @@ module.exports = generatePage = allEmployees => {
   return generateIntern(employee)
   }
 })
-console.log(employeeHTML);
 
   return `
   <!DOCTYPE html>
@@ -38,9 +37,7 @@ console.log(employeeHTML);
       </div>
     </header>
     <main class="container my-5">
-      ${generateManager()}
-      ${generateEngineer()}
-      ${generateIntern()}
+    ${employeeHTML.toString()}
     </main>
     <footer class="container text-center py-3">
       <h3 class="text-dark">&copy;2020 by INSERTNAME</h3>
@@ -52,29 +49,29 @@ console.log(employeeHTML);
 
 // template for Manager
 const generateManager = Manager => {
-  // return `
-  // <p>${Manager.name}</p>
-  // <p>${Manager.id}</p>
-  // <p>${Manager.email}</p>
-  // <p>${Manager.officeNumber}</p>`
+  return `
+  <p>Manager Name: ${Manager.name}</p>
+  <p>Manager Id: ${Manager.id}</p>
+  <p>Manager Email: ${Manager.email}</p>
+  <p>Manager Office Number: ${Manager.officeNumber}</p>`
 }
 
 // Template for Engineer
 const generateEngineer = Engineer => {
-  // return `
-  // <p>${Engineer.name}</p>
-  // <p>${Engineer.id}</p>
-  // <p>${Engineer.email}</p>
-  // <p>${Engineer.github}</p>`
+  return `
+  <p>Engineer Name: ${Engineer.name}</p>
+  <p>Engineer Id: ${Engineer.id}</p>
+  <p>Engineer Email: ${Engineer.email}</p>
+  <p>Engineer Github: ${Engineer.github}</p>`
 }
 
 // template for intern
 const generateIntern = Intern => {
-  // return `
-  // <p>${Intern.name}</p>
-  // <p>${Intern.id}</p>
-  // <p>${Intern.email}</p>
-  // <p>${Intern.school}</p>`
+  return `
+  <p>Intern Name: ${Intern.name}</p>
+  <p>Intern Id: ${Intern.id}</p>
+  <p>Intern Email: ${Intern.email}</p>
+  <p>Intern School: ${Intern.school}</p>`
 }
   
 
