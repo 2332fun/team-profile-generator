@@ -58,7 +58,7 @@ module.exports = generatePage = allEmployees => {
 // template for Manager
 const generateManager = Manager => {
   return `
-  <div class ="container flex-row justify-space-between align-center employee manager">
+  <div class ="container flex-row justify-space-around align-center employee manager">
   <h2>Manager</h2>
   <p>Name: ${Manager.name}</p>
   <p>Id: ${Manager.id}</p>
@@ -71,7 +71,7 @@ const generateManager = Manager => {
 // Template for Engineer
 const generateEngineer = Engineer => {
   return `
-  <div class ="container flex-row justify-space-between align-center employee engineer">
+  <div class ="container flex-row justify-space-around align-center employee engineer">
   <h3>Engineer</h3>
   <p>Name: ${Engineer.name}</p>
   <p>Id: ${Engineer.id}</p>
@@ -84,7 +84,7 @@ const generateEngineer = Engineer => {
 // template for intern
 const generateIntern = Intern => {
   return `
-  <div class ="container flex-row justify-space-between align-center employee intern">
+  <div class ="container flex-row justify-space-around align-center employee intern">
   <h4>Intern</h4>
   <p>Name: ${Intern.name}</p>
   <p>Id: ${Intern.id}</p>
