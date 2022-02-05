@@ -27,6 +27,30 @@
     font-size: 16px;
   }
   
+  p {
+    margin: 0;
+  }
+
+  /*Start of Employee CSS*/
+  .employee {
+    background-color: lightgray;
+    border-bottom: var(--secondary) solid 10px;
+  }
+
+  .manager {
+    background-color: lightblue;
+  }
+
+  .engineer {
+    background-color: lightgreen;
+  }
+
+  .intern {
+    background-color: lightgray;
+  }
+
+  /*End of Employee CSS*/
+
   h1,
   h2,
   h3,
@@ -49,6 +73,7 @@
   
   h3 {
     font-size: 1.75rem;
+    padding: 0;
   }
   
   h4 {

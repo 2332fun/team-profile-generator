@@ -1,17 +1,23 @@
 //template for page layout
 module.exports = generatePage = allEmployees => {
   //map allEmployees, generateHTML
-  const employeeHTML = allEmployees.map(employee => {
+  const managerHTML = allEmployees.map(employee => {
     if (employee.getRole() == 'Manager') {
       return generateManager(employee)
-  }
-  if (employee.getRole() == 'Engineer') {
-    return generateEngineer(employee)
-  }
-  if (employee.getRole() == 'Intern') {
-  return generateIntern(employee)
-  }
-})
+    }
+  })
+  const engineerHTML = allEmployees.map(employee => {
+    if (employee.getRole() == 'Engineer') {
+      return generateEngineer(employee)
+    }
+  })
+
+  const internHTML = allEmployees.map(employee => {
+    if (employee.getRole() == 'Intern') {
+      return generateIntern(employee)
+    }
+  })
+
 
   return `
   <!DOCTYPE html>
@@ -37,7 +43,9 @@ module.exports = generatePage = allEmployees => {
       </div>
     </header>
     <main class="container my-5">
-    ${employeeHTML.join("")}
+    ${managerHTML.join("")}
+    ${engineerHTML.join("")}
+    ${internHTML.join("")}
     </main>
     <footer class="container text-center py-3">
       <h3 class="text-dark">&copy;2022 by Diana</h3>
@@ -50,31 +58,40 @@ module.exports = generatePage = allEmployees => {
 // template for Manager
 const generateManager = Manager => {
   return `
+  <div class ="container flex-row justify-space-between align-center employee manager">
   <h2>Manager</h2>
   <p>Name: ${Manager.name}</p>
   <p>Id: ${Manager.id}</p>
   <p>Email: ${Manager.email}</p>
-  <p>Office Number: ${Manager.officeNumber}</p>`
+  <p>Office Number: ${Manager.officeNumber}</p>
+  </div>
+  `
 }
 
 // Template for Engineer
 const generateEngineer = Engineer => {
   return `
-  <h2>Engineer</h2>
+  <div class ="container flex-row justify-space-between align-center employee engineer">
+  <h3>Engineer</h3>
   <p>Name: ${Engineer.name}</p>
   <p>Id: ${Engineer.id}</p>
   <p>Email: ${Engineer.email}</p>
-  <p>Github: ${Engineer.github}</p>`
+  <p>Github: ${Engineer.github}</p>
+  </div>
+  `
 }
 
 // template for intern
 const generateIntern = Intern => {
   return `
-  <h2>Intern</h2>
+  <div class ="container flex-row justify-space-between align-center employee intern">
+  <h4>Intern</h4>
   <p>Name: ${Intern.name}</p>
   <p>Id: ${Intern.id}</p>
   <p>Email: ${Intern.email}</p>
-  <p>School: ${Intern.school}</p>`
+  <p>School: ${Intern.school}</p>
+  </div>
+  `
 }
   
 
