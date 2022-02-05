@@ -30,17 +30,17 @@ module.exports = generatePage = allEmployees => {
   <body>
     <header>
       <div class="container flex-row justify-space-between align-center py-3">
-        <h1 class="page-title text-secondary bg-dark py-2 px-3">Header</h1>
+        <h1 class="page-title text-secondary bg-dark py-2 px-3">Team Profile Generator</h1>
         <nav class="flex-row">
           <a class="ml-2 my-1 px-2 py-1 bg-secondary text-dark" href="https://github.com/">GitHub</a>
         </nav>
       </div>
     </header>
     <main class="container my-5">
-    ${employeeHTML.toString()}
+    ${employeeHTML.join("")}
     </main>
     <footer class="container text-center py-3">
-      <h3 class="text-dark">&copy;2020 by INSERTNAME</h3>
+      <h3 class="text-dark">&copy;2022 by Diana</h3>
     </footer>
   </body>
   </html>
@@ -50,28 +50,31 @@ module.exports = generatePage = allEmployees => {
 // template for Manager
 const generateManager = Manager => {
   return `
-  <p>Manager Name: ${Manager.name}</p>
-  <p>Manager Id: ${Manager.id}</p>
-  <p>Manager Email: ${Manager.email}</p>
-  <p>Manager Office Number: ${Manager.officeNumber}</p>`
+  <h2>Manager</h2>
+  <p>Name: ${Manager.name}</p>
+  <p>Id: ${Manager.id}</p>
+  <p>Email: ${Manager.email}</p>
+  <p>Office Number: ${Manager.officeNumber}</p>`
 }
 
 // Template for Engineer
 const generateEngineer = Engineer => {
   return `
-  <p>Engineer Name: ${Engineer.name}</p>
-  <p>Engineer Id: ${Engineer.id}</p>
-  <p>Engineer Email: ${Engineer.email}</p>
-  <p>Engineer Github: ${Engineer.github}</p>`
+  <h2>Engineer</h2>
+  <p>Name: ${Engineer.name}</p>
+  <p>Id: ${Engineer.id}</p>
+  <p>Email: ${Engineer.email}</p>
+  <p>Github: ${Engineer.github}</p>`
 }
 
 // template for intern
 const generateIntern = Intern => {
   return `
-  <p>Intern Name: ${Intern.name}</p>
-  <p>Intern Id: ${Intern.id}</p>
-  <p>Intern Email: ${Intern.email}</p>
-  <p>Intern School: ${Intern.school}</p>`
+  <h2>Intern</h2>
+  <p>Name: ${Intern.name}</p>
+  <p>Id: ${Intern.id}</p>
+  <p>Email: ${Intern.email}</p>
+  <p>School: ${Intern.school}</p>`
 }
   
 
