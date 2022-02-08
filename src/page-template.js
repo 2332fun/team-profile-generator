@@ -37,9 +37,6 @@ module.exports = generatePage = allEmployees => {
     <header>
       <div class="container flex-row justify-space-between align-center py-3">
         <h1 class="page-title text-secondary bg-dark py-2 px-3">Team Profile Generator</h1>
-        <nav class="flex-row">
-          <a class="ml-2 my-1 px-2 py-1 bg-secondary text-dark" href="https://github.com/">GitHub</a>
-        </nav>
       </div>
     </header>
     <main class="container my-5">
@@ -62,7 +59,7 @@ const generateManager = Manager => {
   <h2>Manager</h2>
   <p>Name: ${Manager.name}</p>
   <p>Id: ${Manager.id}</p>
-  <p>Email: <a href="mailto:${Manager.email}>${Manager.email}</a></p>
+  <p>Email: <a href="mailto:${Manager.email}">${Manager.email}</a></p>
   <p>Office Number: ${Manager.officeNumber}</p>
   </div>
   `
@@ -75,7 +72,7 @@ const generateEngineer = Engineer => {
   <h3>Engineer</h3>
   <p>Name: ${Engineer.name}</p>
   <p>Id: ${Engineer.id}</p>
-  <p>Email: <a href="mailto:${Engineer.email}>${Engineer.email}</a></p>
+  <p>Email: <a href="mailto:${Engineer.email}">${Engineer.email}</a></p>
   <p>Github: <a href="https://github.com/${Engineer.github}" target="_blank">${Engineer.github}</a></p>
   </div>
   `
@@ -88,7 +85,7 @@ const generateIntern = Intern => {
   <h4>Intern</h4>
   <p>Name: ${Intern.name}</p>
   <p>Id: ${Intern.id}</p>
-  <p>Email: <a href="mailto:${Intern.email}>${Intern.email}</a></p>
+  <p>Email: <a href="mailto:${Intern.email}">${Intern.email}</a></p>
   <p>School: ${Intern.school}</p>
   </div>
   `
