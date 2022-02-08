@@ -1,75 +1,62 @@
-# team-profile-generator
+# Work Day Scheduler
 
-AS A manager
-I WANT to generate a webpage that displays my team's basic info
-SO THAT I have quick access to their emails and GitHub profiles
+## Description
 
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for my team members and their information
-THEN an HTML file is generated that displays a nicely formatted team roster based on user input
-WHEN I click on an email address in the HTML
-THEN my default email program opens and populates the TO field of the email with the address
-WHEN I click on the GitHub username
-THEN that GitHub profile opens in a new tab
-WHEN I start the application
-THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
-WHEN I enter the team manager’s name, employee ID, email address, and office number
-THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
-WHEN I select the engineer option
-THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
-WHEN I select the intern option
-THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
-WHEN I decide to finish building my team
-THEN I exit the application, and the HTML is generated
+What: My motivation for this project was to make a simplistic and user-friendly scheduler. My efforts have made a page where the user can click the description space to edit the schedule's text, then save via clicking the button with the intuitive save icon. The background color of the row will indicate if it is a past, present, or future time from their current moment of looking at the page.
 
-This Challenge will combine many of the skills you’ve learned over the first ten weeks of this course. To help you get started, we’ve provided some guidelines in addition to the User Story and Acceptance Criteria.
+* [Link to Webpage](https://2332fun.github.io/team-profile-generator/)
 
-Your application should use Jest (Links to an external site.) for running the unit tests and Inquirer (Links to an external site.) for collecting input from the user. The application will be invoked by using the following command:
+## Table of Contents
 
-node index.js
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+* [Badges](#badges)
+* [Features](#features)
+* [Contributing](#contributing)
+* [Tests](#tests)
 
-Make sure that you remove dist from the .gitignore file so that Git will track this folder and include it when you push up to your application's repository.
+## Installation
 
-The application must have these classes: Employee, Manager, Engineer, and Intern. The tests for these classes (in the _tests_ directory) must all pass.
+No installation required. Follow the link listed under Usage below or in the Description above.
 
-The first class is an Employee parent class with the following properties and methods:
+## Usage
 
-name
+* [Link to Webpage](https://2332fun.github.io/team-profile-generator/)
+![Screenshot](/assets/images/screenshot.jpg "Screenshot")
 
-id
+## Credits
 
-email
+* [Shields.io Link](https://shields.io/): Used to create My Shield found in Badges below.
+* [License Link](https://choosealicense.com/licenses/gpl-3.0/): Used to determine and copy the correct license for the project found in License below and the COPYING.txt file.
+* [Contributor Covenant Link](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md): Used to obtain a proper code of conduct for contribution found in Contributing below.
+* [Markdown Guide](https://www.markdownguide.org/basic-syntax/): Used to setup the format of the README.md.
 
-getName()
+## License
 
-getId()
+GNU General Public License v3.0
 
-getEmail()
+Copyright (C) 2022 Diana Taylor
 
-getRole() // Returns 'Employee'
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-The other three classes will extend Employee.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
-In addition to Employee's properties and methods, Manager will also have:
+You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-officeNumber
+## Badges
 
-getRole() // Overridden to return 'Manager'
+[![My Shield](https://img.shields.io/badge/2332fun-2332fun%20contributed%20to%20this%20project.-blueviolet)](https://github.com/2332fun)
 
-In addition to Employee's properties and methods, Engineer will also have:
+## Features
 
-github // GitHub username
+The website has a clock that keeps track of the time the user opened the webpage, along with a save button feature for keeping their changes.
 
-getGithub()
+## Contributing
 
-getRole() // Overridden to return 'Engineer'
+If you are interested in contributing to this project, please read the contributor covenant found at [Contributor Covenant Link](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md). Then email me at <mirachan2332@gmail.com> to further collaborate.
 
-In addition to Employee's properties and methods, Intern will also have:
+## Tests
 
-school
-
-getSchool()
-
-getRole() // Overridden to return 'Intern'
-
-Finally, although it’s not a requirement, you should consider adding validation to ensure that user input provided is in the proper expected format.
+Employee.test.js, Engineer.test.js, Intern.test.js, and Manager.test.js.
