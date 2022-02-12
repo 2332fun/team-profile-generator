@@ -1,8 +1,8 @@
-# Work Day Scheduler
+# Team Profile Generator
 
 ## Description
 
-What: My motivation for this project was to make a simplistic and user-friendly scheduler. My efforts have made a page where the user can click the description space to edit the schedule's text, then save via clicking the button with the intuitive save icon. The background color of the row will indicate if it is a past, present, or future time from their current moment of looking at the page.
+What: My motivation for this project was to make a simplistic and user-friendly employee management page. My efforts have made a node.js questionaire that is simple to follow and organizes the engineers and interns after the questions have been finished.
 
 * [Link to Webpage](https://2332fun.github.io/team-profile-generator/)
 
@@ -25,6 +25,8 @@ No installation required. Follow the link listed under Usage below or in the Des
 
 * [Link to Webpage](https://2332fun.github.io/team-profile-generator/)
 ![Screenshot](/assets/images/screenshot.PNG "Screenshot")
+* [Link to Video Showing Usage](https://watch.screencastify.com/v/njsSA6iMfF4PwfQ1ydtC)
+* [Link to Video Showing Tests](https://watch.screencastify.com/v/uknhZ8dD2J5r4xtLKSIh)
 
 ## Credits
 
